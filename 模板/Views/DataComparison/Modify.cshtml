@@ -1,0 +1,36 @@
+﻿@{
+    ViewData["Title"] = "Privacy Policy";
+}
+
+<style type="text/css">
+    body {
+        background-color: #ffffff;
+    }
+</style>
+
+<script src="~/app/{modelName}/modify.js" asp-append-version="true"></script>
+
+<div class="layuimini-container" ng-controller="fromController">
+    <div class="layuimini-main">
+        <form class="layui-form" lay-filter="formMain">
+            <blockquote class="layui-elem-quote layui-text">基本信息</blockquote>
+            <div>
+                <div class="layui-form-item">
+                    <!-- <div class="layui-inline">
+                        <label class="layui-form-label">*系统名称</label>
+                        <div class="layui-input-inline">
+                            <input type="text" name="system_name" ng-model="model.system_name" lay-verify="required" lay-reqtext="系统名称是必填项" autocomplete="off" class="layui-input">
+                        </div>
+                    </div> -->
+                    {HtmlModifyListTemplate}
+
+                </div>
+            </div>
+
+            <div style="text-align:right;border-top:1px solid #ddd;padding-top:20px;margin-top:20px;">
+                <button id="btnCancel" type="button" class="layui-btn layui-btn-primary layui-btn-sm" style="width:80px;" onclick="parent.layer.close(parent.layer.getFrameIndex(window.name));">取消</button>
+                <button id="btnSave" lay-submit="" lay-filter="btnSave" class="layui-btn layui-btn-normal layui-btn-sm" style="width:80px;">保存</button>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,41 @@
+项目命名空间 ：projectName
+实体类Class名称：modelName
+Class，各个属性：Item
+Class,  个别属性搜索：selectName  // 暂存
+Class,  属性对应的中文名称：ItemName
+
+前端CSS:CssStyleLinkTemplateTemplate
+
+前端JS:JsLinkTemplate
+
+前端创建的接口
+modelName/Create
+
+前端编辑的接口
+modelName/Modify
+
+前端删除的接口
+modelName/Delete
+
+server层查询
+ServerSwitchPageSearchQueryListTemplateTemplate
+
+Model类各个字段生成
+ModelClassPropertyListTemplate
+
+JsColumns相关list
+JsColumnsPropertyListTemplate
+
+Js initModify 相关list
+JsInitModifyListTemplate
+
+html 最上面搜索框
+HtmlSearchInputListTemplate
+
+html新增框
+HtmlCreateBoxListTemplate
+
+html编辑修改框
+HtmlModifyListTemplate
+
+

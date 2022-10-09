@@ -1,0 +1,70 @@
+﻿@{
+    ViewData["Title"] = "Privacy Policy";
+}
+
+<script src="~/app/{modelName}/list.js" asp-append-version="true"></script>
+
+
+<div class="layuimini-container" ng-controller="listCtrl">
+    <div class="layuimini-main">
+
+        <div style="margin: 10px 10px 10px 10px">
+            <form class="layui-form layui-form-pane" action="" style="display:flex;">
+                <div class="layui-form-item" style="flex:1;">
+                
+                    <!-- <div class="layui-inline">
+                        <div class="layui-input-inline">
+                            <input type="text" name="data_value" placeholder="数据对照-value" autocomplete="off" class="layui-input">
+                        </div>
+                    </div> -->
+                    {HtmlSearchInputListTemplate}
+
+                    <div class="layui-inline">
+                        <button type="submit" class="layui-btn layui-btn-normal layui-btn-sm data-add-btn layui-btn-tool" lay-submit lay-filter="data-search-btn">
+                            <i class="fa fa-search"></i>
+                            <span>查询</span>
+                        </button>
+                    </div>
+                    <div class="layui-inline">
+                        <button type="button" id="btnAdd" class="layui-btn layui-btn-normal layui-btn-sm data-add-btn layui-btn-tool" lay-event="add">
+                            <i class="fa fa-plus"></i>
+                            <span>新建</span>
+                        </button>
+                    </div>
+                    <div class="layui-inline">
+                        <button type="button" id="btnDelete" class="layui-btn layui-btn-danger layui-btn-sm data-add-btn layui-btn-tool" lay-event="delete">
+                            <i class="fa fa-trash-o"></i>
+                            <span>删除</span>
+                        </button>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+
+        <table class="layui-hide" id="table1" lay-filter="table1Filter"></table>
+
+        <!--状态列-->
+        <script type="text/html" id="tableColStatus">
+            {{#  if(d.status == 1){ }}
+              <button type="button" class="com-icon com-icon-enable">启用</button>
+            {{#  } else { }}
+              <button type="button" class="com-icon com-icon-disable">停用</button>
+            {{#  } }}
+        </script>
+
+        <!--操作列-->
+        <script type="text/html" id="table1Bar">
+@*           {{#  if(d.status == 1){ }}
+              <i class="com-op-icon com-op-icon-disable" lay-event="disactive"></i>
+            {{#  } else { }}
+              <i class="com-op-icon com-op-icon-enable" lay-event="active"></i>
+            {{#  } }}
+*@
+
+            <i class="com-op-icon com-op-icon-edit" lay-event="edit"></i>
+            <i class="com-op-icon com-op-icon-delete" lay-event="delete"></i>
+        </script>
+
+    </div>
+</div>
