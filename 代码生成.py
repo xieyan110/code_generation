@@ -142,7 +142,7 @@ class template_content_builder:
         self.html_search_input_list_template = {"HtmlSearchInputListTemplate":'\n\
                     <div class="layui-inline">\n\
                         <div class="layui-input-inline">\n\
-                            <input type="text" name="{0}" placeholder="{2}" autocomplete="off" class="layui-input">\n\
+                            <input type="text" name="{0}" placeholder="{2}" autocomplete="on" class="layui-input">\n\
                         </div>\n\
                     </div>'}
 
