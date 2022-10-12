@@ -136,7 +136,7 @@
                         cancel: function (index) {
                         },
                         end: function () {
-                            renderTable();
+                            $('#search_btn').click();
                         }
                     });
                     break;
