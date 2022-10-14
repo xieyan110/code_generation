@@ -101,7 +101,7 @@ class template_content_builder:
         # server 层 页面查询模板
         self.server_switch_page_search_query_list = {"ServerSwitchPageSearchQueryListTemplateTemplate":'\n\
                         case "{0}":\n\
-                            queryable.Where(x => x.{0} == v.Trim()); break;'}
+                            queryable.Where(x => x.{0}.ToString() == v.Trim()); break;'}
 
         # 实体类 属性名称
         self.model_class_property_list = {"ModelClassPropertyListTemplate":'public {1} {0} {{ get; set; }}'}
