@@ -62,7 +62,7 @@ namespace QzhealthWeb.Areas.API.Controllers
                 var model = post_json.CastTo<{modelName}>();
 
                 model.create_time = DateTime.Now.ToUniversalTime();
-                model.create_user_id = getUserInfo()?.getOrganId() ?? 0;
+                model.create_user_id = getUserInfo()?.user_id ?? 0;
 
                 response.ok = db.AddTableRow(model);
                 response.msg += response.ok ? "成功" : "失败";
