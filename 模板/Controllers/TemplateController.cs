@@ -18,7 +18,7 @@ namespace QzhealthWeb.Areas.API.Controllers
         {
             //var userInfo = this.getUserInfo();
 
-            var ado = new {modelName}Ado() as IQzhealthAdo<{modelName}>;
+            var ado = new {modelName}Ado();
             var (count, list) = ado.PageList(new LSearchParams.PageParams(Request.QueryString.Value));
             
             var response = new L.ResponsePage(0, "", count, list.ToList<{modelName}Output>());
