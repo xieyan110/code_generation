@@ -31,7 +31,8 @@ namespace {projectName}.Ado
                     }
                 }
             }
-            return (pageParam.total, queryable.OrderByDescending(x => x.{ID}).ToPageList(pageParam.PageNumber, pageParam.PageSize, ref pageParam.total));
+            var lsit = queryable.OrderByDescending(x => x.{ID}).ToPageList(pageParam.PageNumber, pageParam.PageSize, ref pageParam.total);
+            return (pageParam.Total, lsit);
         }
 
     }
